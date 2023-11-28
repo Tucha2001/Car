@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %} Description car {% endblock title %}
+
+
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h1>{{ descriptions.title }}</h1>
+                <p>{{ descriptions.description }}</p>
+
+                {% if descriptions.image %}
+                    <img src="{{ descriptions.image.url }}" alt="" class="img-fluid">
+                {% endif %}
+                <p>{{ description.date }}</p>
+
+            </div>
+        </div>
+    </div>
+{% endblock content %}
